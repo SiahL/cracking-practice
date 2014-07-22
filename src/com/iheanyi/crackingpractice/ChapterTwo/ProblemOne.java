@@ -1,16 +1,17 @@
 package com.iheanyi.crackingpractice.ChapterTwo;
 
 import java.util.Hashtable;
-import java.util.LinkedList;
 
 /**
  * Created by iheanyi on 7/20/14.
  */
+
 public class ProblemOne {
     /* Write code to remove duplicate nodes from an unsorted linked list
     *
     *
-    * My Solution's Space Complexity: O(n), because of the additional hash table.
+    * Solution Space Complexity: O(n), because of the additional hash table.
+    * Solution Time Complexity: O(n) with the hash table, because you have to visit every node exactly once.
     * */
 
 
@@ -31,21 +32,13 @@ public class ProblemOne {
 
         System.out.println("Finished appending");
 
-        Node n = head;
-        while(n != null) {
-            System.out.println(n.data);
-            n = n.next;
-        }
+        head.printNodes();
 
         removeDuplicates(head);
 
         System.out.println("How about duplicates?");
-        Node n2 = head;
 
-        while(n2 != null) {
-            System.out.println(n2.data);
-            n2 = n2.next;
-        }
+        head.printNodes();
     }
 
     public static void removeDuplicates(Node n) {

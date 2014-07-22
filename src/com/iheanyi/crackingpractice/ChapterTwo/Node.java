@@ -22,4 +22,25 @@ class Node {
 
         n.next = end;
     }
+
+    void printNodes() {
+        Node n = this;
+
+        while (n != null) {
+            System.out.println(n.data);
+            n = n.next;
+        }
+
+    }
+
+    void appendToTail(Node end) {
+        Node n = this;
+
+        while(n.next != null) {
+            n = n.next;
+        }
+
+        n.next = end;
+
+    }
 }
